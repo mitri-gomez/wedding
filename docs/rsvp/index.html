@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Meta tags -->
+    <meta property="og:title" content="Let us know if you can come to our wedding!">
+    <meta property="og:image" content="https://brianna-mitri.github.io/event-management/assets/img/cheers_night.jpg">
+    <meta property="og:description" content="Please RSVP by November 1st to celebrate our wedding with us!">
+    <meta property="og:url" content="https://brianna-mitri.github.io/event-management/rsvp">
+    <meta property="og:type" content="website">
+    
+    <title>RSVP - Brianna & Jaysen's Wedding</title>
+
+
+    <!-- CSS-->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous"> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
+    <link href="../assets/css/main.min.css?v=1" rel="stylesheet">
+  </head>
+  <body>
+
+
+
+    <!------------------------------------------- Navbar ------------------------------------------->
+
+    <nav class="navbar navbar-expand-sm navbar-theme-dark sticky-top navbar-spacing">
+      <div class="container-fluid">
+
+        <!-- Hamburger/Logo Name (left) -->
+        <div class="d-flex align-items-center gap-1">
+
+            <!-- Hamburger -->
+            <button class="navbar-toggler me-1" type="button" 
+                    data-bs-toggle="collapse" data-bs-target="#navbarMenu" 
+                    aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Logo Name -->
+             <a class="navbar-brand me-0 d-md-none" href="../">11.21.2025</a>
+            <!-- <a class="navbar-brand me-0 d-md-none" href="../">MM &#8226; DD &#8226; YY</a> -->
+            <a class="navbar-brand me-0 d-none d-md-block" href="../">11 &#8226; 21 &#8226; 2025</a>
+
+        </div>
+
+        <!-- CTA (always visible on right side)-->
+        <a class="btn btn ms-sm-3 order-sm-3" href="../details/">See Details</a>
+        
+        <!-- Menu -->
+        <div class="collapse navbar-collapse order-sm-2" 
+            id="navbarMenu">
+
+          
+          <!-- <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="navbarMenuLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div> -->
+
+          <!-- Other pages -->
+          <!-- <div class="offcanvas-body"> -->
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+              <li class="nav-item">
+                <a class="nav-link" href="../">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../details/">Details</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./">RSVP</a>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="faq.html">Registry</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li> -->
+            </ul>
+            
+            <!-- CTA -->
+            <!-- <div class="mt-3 d-sm-none">
+                <a class="btn btn ms-sm-3" href="#cta">Get Updates</a>
+            </div> -->
+            
+
+          <!-- </div> -->
+        </div>
+
+        <!-- CTA (always visible on right side)-->
+        <!-- <a class="btn btn ms-sm-3" href="#cta">Get Updates</a> -->
+
+
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="rsvp-main">
+
+        <div class="container-fluid rsvp-container p-0">
+            <div class="row g-0">
+                <!-- Title section (left on desktop and top on mobile)-->
+                <div class="col-xl-7 col-12 text-light d-flex justify-content-center align-items-center">
+                    <section class="rsvp-title">
+
+                        <!-- Title -->
+                        <div class="text-center">
+                            <h1 class="display-1 fw-semibold">RSVP</h1>
+                            <h4 class="display-7 fw-normal">Kindly submit by November 1st</h4>
+                        </div>
+                        
+                    </section>
+
+                </div>
+
+                <!--- Form Section (right on desktop, bottom on mobile)-->
+                <div class="col-xl-5 col-12 bg-light">
+                    <section class="rsvp-form form-spacing">
+                        <div class="container-fluid form-container">
+                            <!-- <h2 class="display-4 fw-semibold mb-md-4">We hope you say yes!</h2> -->
+
+                            <!------- Progress Bar ------->
+                            <div class="progress" role="progressbar">
+                                <div class="progress-bar bg-info" id="progressBar" style="width: 25%"></div>
+                            </div>
+
+                            <!------- Form ------->
+                            <form id="rsvpForm" novalidate>
+
+                                <!-- 1) Name input -->
+                                <div class="step active" id="step-name">
+                                    <div class="row g-3 mb-3">
+                                        
+                                        <h3 class="display-4 fw-semibold">Let's find your invite</h3>
+                                        <!-- <h2 class="display-4 fw-semibold text-center">Welcome!</h2>
+                                        <p class="text-muted text-center">Let's first find your invite</p> -->
+
+                                        <!-- Alert message -->
+                                        <div id="alert-name" style="display: none;">
+                                            <div class="alert alert-danger d-flex align-items-center" role="alert">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-exclamation-circle-fill me-2" viewBox="0 0 16 16">
+                                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4m.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/>
+                                                </svg>
+                                                <div> 
+                                                    <span class="fw-bold">Error:</span>
+                                                    <span id="alert-name-message">Couldn't process. Please try again later</span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- Name inputs -->
+                                        <div class="col-sm-6">
+                                            <label for="firstName" class="form-label">First name</label>
+                                            <input type="text" class="form-control" id="firstName" required>
+                                            <div class="invalid-feedback">
+                                                Please enter your first name
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label for="lastName" class="form-label">Last name</label>
+                                            <input type="text" class="form-control" id="lastName" required>
+                                            <div class="invalid-feedback">
+                                                Please enter your last name
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Email input -->
+                                    <div class="row g-3 mb-4 mb-xl-5">
+                                        <div class="col">
+                                            <label for="userEmail" class="form-label">Email</label>
+                                            <input
+                                            type="email" 
+                                            class="form-control" 
+                                            id="userEmail" 
+                                            autocomplete="email" 
+                                            name="userEmail"
+                                            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                                            required>
+                                            <div class="form-text">To get a confirmation email</div>
+                                            <div class="invalid-feedback">
+                                                Please enter a valid email
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-----SINGLE PATH------------------------------------------------------------------------------------------------------>
+                                <!-- 2) Attending input (single)-->
+                                <div class="step" id="step-attendance">
+                                    <div class="row g-3 mb-3">
+                                        <h3 class="display-4 fw-semibold">Nice to see you, <span id="guest-name">guest</span>!</h3>
+                                        <h4 class="fw-medium">Will you come to our wedding?</h4>
+                                        <!-- <h3 class="display-4 fw-semibold">Will you come to our event name?</h3> -->
+                                        <!-- <h2 class="display-4 fw-semibold text-center">Great to see you!</h2>
+                                        <p class="text-muted text-center">Please let us know if you can make it</p>
+                                        <h4>Will you come to our event name?</h4> -->
+
+                                        <div class="validation-wrapper">
+                                            <ul class="list-group list-group-cards">
+                                                <!-- options -->
+                                                <li class="list-group-item">
+                                                    <input class="form-check-input me-3" type="radio" name="attendingInput" id="attendingYes" value="yes" required>
+                                                    <label class="form-check-label stretched-link" for="attendingYes">
+                                                        Yes, I'll be there!
+                                                    </label>
+                                                </li>
+
+                                                <li class="list-group-item">
+                                                    <input class="form-check-input me-3" type="radio" name="attendingInput" id="attendingNo" value="no" required>
+                                                    <label class="form-check-label stretched-link" for="attendingNo">
+                                                        Sorry, can't make it :(
+                                                    </label>
+                                                </li>
+                                            </ul>
+
+                                            <!-- invalid feedback -->
+                                            <div class="invalid-feedback">
+                                                Please select whether you'll be attending
+                                            </div>
+
+                                        </div>
+                                        
+
+                                    </div>
+                                </div>
+
+                                <!-- 3) Dietary preferences (single)-->
+                                <div class="step" id="step-dietary">
+                                    <h3 class="display-4 fw-semibold">Do you have a dietary preference?</h3>
+                                    <!-- <h2 class="display-4 fw-semibold text-center">Dietary Information</h2>
+                                    <p class="text-muted text-center">Help us prepare the perfect meal for you</p>
+
+                                    <h4>Do you have a dietary preference?</h4> -->
+
+                                    <div class="validation-wrapper">
+                                        <ul class="list-group list-group-cards">
+                                            <li class="list-group-item">
+                                                <input class="form-check-input me-3" type="radio" name="dietaryInput" id="dietVegan" value="vegan" required>
+                                                <label class="form-check-label stretched-link" for="dietVegan">
+                                                    Vegan
+                                                </label>
+                                            </li>
+                                            
+                                            <li class="list-group-item">
+                                                <input class="form-check-input me-3" type="radio" name="dietaryInput" id="dietVegetarian" value="vegetarian" required>
+                                                <label class="form-check-label stretched-link" for="dietVegetarian">
+                                                    Vegetarian
+                                                </label>
+                                            </li>
+
+                                            <li class="list-group-item">
+                                                <input class="form-check-input me-3" type="radio" name="dietaryInput" id="dietPescatarian" value="pescatarian" required>
+                                                <label class="form-check-label stretched-link" for="dietPescatarian">
+                                                    Pescatarian
+                                                </label>
+                                            </li>
+
+                                            <li class="list-group-item">
+                                                <input class="form-check-input me-3" type="radio" name="dietaryInput" id="dietNone" value="none" required>
+                                                <label class="form-check-label stretched-link" for="dietNone">
+                                                    None
+                                                </label>
+                                            </li>
+                                        </ul>
+
+                                        <!-- invalid feedback -->
+                                        <div class="invalid-feedback">
+                                            Please select your dietary preference
+                                        </div>
+
+                                    </div>
+
+                   
+                                </div>
+
+                                <!-----GROUP PATH------------------------------------------------------------------------------------------------------>
+                                <!-- 2) Attending input (group)-->
+                                <div class="step" id="step-attendance-grp">
+                                    <div class="row g-3 mb-3">
+                                        <h3 class="display-4 fw-semibold">Nice to see you, <span id="grp-guest-name">guest</span>!</h3>
+                                        <h4 class="fw-medium">Who can come to our wedding?</h4>
+                                        <!-- <h2 class="display-4 fw-semibold text-center">Great to see you!</h2>
+                                        <p class="text-muted text-center">Please let us know who can make it</p>
+                                        <h4>Who can come to our event name?</h4> -->
+
+                                        <!--populated by JS once user name verified -->
+                                        <div id="grpChecklist" class="validation-wrapper"></div>
+                                        <!-- <div id="grpChecklist" class="d-flex flex-column"></div> -->
+
+                                        
+                                        <!-- invalid feedback -->
+                                        <!-- <div class="invalid-feedback">
+                                            Please select at least one guest
+                                        </div> -->
+                                    </div>
+                                </div>
+                                
+                                <!-- 3) Dietary preferences (group)-->
+                                <div class="step" id="step-dietary-grp">
+                                    <h3 class="display-4 fw-semibold">Any dietary preferences?</h3>
+                                    <p class="text-muted">For example: vegan or vegetarian</p>
+                                    <!-- <h2 class="display-4 fw-semibold text-center">Dietary Information</h2>
+                                    <p class="text-muted text-center">Help us prepare the perfect meals for everyone</p>
+
+                                    <h4>Does anyone have a dietary preference?</h4> -->
+
+                                    <div class="validation-wrapper">
+                                        <ul class="list-group list-group-cards">
+                                            <li class="list-group-item">
+                                                <input class="form-check-input me-3" type="radio" name="dietaryGrpInput" id="dietaryGrpYes" value="yes" required>
+                                                <label class="form-check-label stretched-link" for="dietaryGrpYes">
+                                                    Yes
+                                                </label> 
+                                            </li>
+                                            <li class="list-group-item">
+                                                <input class="form-check-input me-3" type="radio" name="dietaryGrpInput" id="dietaryGrpNo" value="no" required>
+                                                <label class="form-check-label stretched-link" for="dietaryGrpNo">
+                                                    No
+                                                </label>
+                                            </li>
+                                        </ul>
+
+                                        <!-- invalid feedback -->
+                                        <div class="invalid-feedback">
+                                            Please select yes or no
+                                        </div>
+                                    </div>
+                                    
+                                
+                            
+
+                                    <!-- Dietary preferences shown if yes checked -->
+                                    <div id="grp-dietary-table-wrap" style="display: none;">
+                                        <h5>Please specify below</h5>
+                                        <div class="card rsvp-card mb-4">
+                                            <!-- <h5 class="card-header">Please specify below</h5> -->
+                                            <div class="card-body">
+                                                <div class="table-responsive">
+                                                    <table class="table rsvp-table table-sm align-middle" id="grp-dietary-table">
+                                                        <!-- <h5>Please specify below</h5> -->
+                                                        <!-- <thead>
+                                                            <tr><th>Guest</th><th>Preference</th></tr>
+                                                        </thead> -->
+                                                        <tbody></tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-----FINALIZATION------------------------------------------------------------------------------------------------------>
+                                <!-- 4) Confirmation input -->
+                                <div class="step" id="step-confirm">
+                                    <h3 class="display-4 fw-semibold">Almost done!</h3>
+                                    <p class="text-muted">Please double check before submitting</p>
+                                    <!-- <h4 class="fw-medium lead-text mb-4">Please double check before submitting</h4> -->
+                                    <!-- <h2 class="display-4 fw-semibold text-center">Confirm Your RSVP</h2>
+                                    <p class="text-muted text-center">Please double check before submitting</p> -->
+
+                                    <!-- Alert message -->
+                                    <div id="alert-submit" style="display: none;">
+                                        <div class="alert alert-danger d-flex align-items-center" role="alert">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-exclamation-circle-fill me-2" viewBox="0 0 16 16">
+                                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4m.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/>
+                                            </svg>
+                                            <div> 
+                                                <span class="fw-bold">Error:</span>
+                                                <span id="alert-submit-message">Couldn't process. Please try again later</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    
+                                    <div class="card rsvp-card mb-4">
+                                        <div class="card-body">
+                                            <!-- <h6>Overview:</h6> -->
+                                            <!-- <p><strong>Name:</strong> <span id="summaryName"></span></p> -->
+                                            <p><strong>Email:</strong> <span id="summaryEmail"></span></p>
+                                            <p><strong>Attending:</strong> <span id="summaryAttending"></span></p>
+
+                                            <!-- Show only if attending -->
+                                            <div id="attendingSummary" style="display: none;">
+                                                <p><strong>Dietary preference:</strong> <span id="summaryDietary"></span></p>
+
+                                                <!-- Only show when group dietary = 'Yes'-->
+                                    
+                                                <div id="summary-dietary-table-wrap" style="display:none;">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <div class="table-responsive">
+                                                                <table class="table rsvp-table table-sm align-middle" id="summary-dietary-table">
+                                                                    <!-- <thead>
+                                                                        <tr><th>Guest</th><th>Preference</th></tr>
+                                                                    </thead> -->
+                                                                    <tbody></tbody>
+                                                                </table> 
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 4) Confirmation input -->
+                                <div class="step" id="step-success">
+                                    <h4 class="display-4 fw-semibold mb-4">Thanks for your RSVP!</h4>
+                                    <h5 class="display-7 fw-normal">We've received your response. Please keep an eye out for your confirmation email.</h5>
+                                </div>
+                                
+                                <!------------- Navigation Buttons ------------->
+                                <div class="d-flex justify-content-between">
+                                    <button type="button" class="btn btn-outline-dark main-btn" id="prevBtn" onclick="changeStep(-1)" style="display: none;">
+                                        Back
+                                    </button>
+
+                                    <div></div> <!--Spacer-->
+
+                                    <button type="button" class="btn btn-info main-btn" id="nextBtn" onclick="changeStep(1)">
+                                        Continue
+                                    </button>
+
+                                    <button type="submit" class="btn btn-info main-btn" id="submitBtn" style="display: none;">
+                                        Send RSVP
+                                    </button>
+                                </div>
+
+
+                            </form>
+
+                        </div>
+                        
+                    </section>
+                    
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-dark banner-spacing-no-margins footer-spacing">
+      <div class="container text-center">
+        <ul class="nav justify-content-center lead-text fw-semibold">
+          <li class="nav-item">
+            <a class="nav-link" href="../">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../details/">Details</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./">RSVP</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="faq.html">Registry</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li> -->
+        </ul>
+        <p class="fw-light">© 2025 Brianna & Jaysen</p>
+      </div>
+      
+    </footer>
+
+    <!---------- SCRIPTS ---------->
+    <!--Bootstrap JS Bundle (w/ Popper)-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    
+    <!-- Validator JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/validator/13.15.15/validator.min.js"></script>
+    <!--Swiper JS-->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+
+    <!--Personal scripts-->
+    <script src="../assets/js/navbar.js"></script>
+    <script src="../assets/js/multistep-form.js"></script>
+    <!-- <script src="./assets/js/countdown.js"></script>
+    <script src="./assets/js/swiping.js"></script>
+    <script src="./assets/js/parallax.js"></script> -->
+  </body>
+</html>
