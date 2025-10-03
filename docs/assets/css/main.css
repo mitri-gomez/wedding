@@ -7,6 +7,8 @@
 /* -------------------------- Custom Color Schemes -------------------------- */
 /* Define color scheme maps (just bg and text) */
 /* Generate utility classes for each color scheme */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 .color-scheme-secondary {
   background-color: #d0d2aa;
   color: #21201f;
@@ -32,6 +34,7 @@
   color: #f5f1e9;
 }
 
+/* -------------- Font family ------------- */
 /* -------------------------- Core Brand Colors -------------------------- */
 /* ---------- Bootstrap Coloring ---------- */
 /* Main Colors */
@@ -149,7 +152,7 @@
   --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-  --bs-body-font-family: var(--bs-font-sans-serif);
+  --bs-body-font-family: "Playfair Display", serif;
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
@@ -13449,6 +13452,7 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+/* -------------- Font family ------------- */
 /* -------------------------- Core Brand Colors -------------------------- */
 /* ---------- Bootstrap Coloring ---------- */
 /* Main Colors */
