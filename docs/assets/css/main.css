@@ -7852,11 +7852,11 @@ textarea.form-control-lg {
   font-style: normal !important;
 }
 
-.fw-lighter, .faqs .accordion-body, .faqs-match .accordion-body, .faqs-primary .accordion-body, .faqs-light .accordion-body, .faqs-dark .accordion-body {
+.fw-lighter {
   font-weight: lighter !important;
 }
 
-.fw-light {
+.fw-light, .faqs .accordion-body, .faqs-match .accordion-body, .faqs-primary .accordion-body, .faqs-light .accordion-body, .faqs-dark .accordion-body {
   font-weight: 300 !important;
 }
 
@@ -7868,11 +7868,11 @@ textarea.form-control-lg {
   font-weight: 500 !important;
 }
 
-.fw-semibold, .faqs .accordion-button, .faqs-match .accordion-button, .faqs-primary .accordion-button, .faqs-light .accordion-button, .faqs-dark .accordion-button {
+.fw-semibold {
   font-weight: 600 !important;
 }
 
-.fw-bold {
+.fw-bold, .faqs .accordion-button, .faqs-match .accordion-button, .faqs-primary .accordion-button, .faqs-light .accordion-button, .faqs-dark .accordion-button {
   font-weight: 700 !important;
 }
 
@@ -13534,6 +13534,7 @@ textarea.form-control-lg {
   line-height: 1.6;
   font-weight: 350;
   color: inherit;
+  font-size: 1.25rem;
 }
 .faqs .accordion-body, .faqs-match .accordion-body, .faqs-primary .accordion-body, .faqs-light .accordion-body, .faqs-dark .accordion-body {
   font-size: clamp(1rem, 2.2vw, 1.25rem);
