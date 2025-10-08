@@ -14075,6 +14075,12 @@ textarea.form-control-lg {
   min-height: 500px;
 }
 
+.hero-registry {
+  background-image: url("../img/table_florals.jpg");
+  height: 40vh;
+  min-height: 500px;
+}
+
 /* ------------------------ Text Sizes Based on Media ------------------------ */
 @media (max-width: 767.98px) {
   section.hero .container h1.display-1, section.hero .container .display-1.h1 {
@@ -14103,6 +14109,14 @@ textarea.form-control-lg {
   .main-btn {
     font-size: 1.25rem;
   }
+}
+
+.btn-external {
+  width: 100%;
+}
+.btn-external::after {
+  content: " →";
+  margin-left: auto;
 }
 
 /*---------------------------- ACTIVE STATES ---------------------------*/
